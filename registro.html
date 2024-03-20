@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/registro.css">
+
+    <title>Patas Finas</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="container-logo">
+                    <i class="fa-solid fa-dog"></i>
+                    <h1 class="logo"><a href="/inicio.html">Patas-Finas</a></h1>
+                    <i class="fa-solid fa-cat"></i>
+                </div>
+
+                <div class="container-user">
+                    <a href="./loginV2.html"><i class="fa-solid fa-user"></i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="./inicio.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Ubicacion</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor">
+        <form class="form" id="frmRegistro">
+            <h2>Registrece</h2>
+            <p>
+                Ingrese los datos que se pide para que pueda tener una cuenta
+            </p>
+            <div class="input">
+                <input type="email" class="box" placeholder="Ingrese su Correo" style="font-size: small;"  id="correo">
+                <input type="password" class="box" placeholder="Ingrese su Contraseña" style="font-size: small;" id="contraseña">
+                <input type="password" class="box" placeholder="Repita su contraseña" style="font-size: small;" id="confiContra"><br>
+                <input type="submit" value="Registrar" class="submit">
+                <br><br />
+                <a class="pregunta" href="./loginV2.html" style="font-size: medium;">Ya tienes Cuenta?</a>
+
+            </div>
+        </form>
+        <div class="contPerro">
+        </div>
+        
+    </div>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="./jscrip/usuario.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
