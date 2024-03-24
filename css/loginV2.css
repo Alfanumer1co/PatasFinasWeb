@@ -1,3 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;    
+  }
+  
+  body {
+      background-color: rgb(253, 253, 253);
+  }
+
+  :root {
+	--primary-color: #1393fc;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+.container-2{
+    display: flex;
+    height: 700px;
+    width: 1000px;
+    box-shadow: 0 0 2px  rgba(0, 0, 0, 0,4);
+    margin: auto;
+    margin-top: 50px;
+}
   .info{
       background-image: url(../imagenes/login.jpg);
       background-position: center center;
@@ -98,112 +127,4 @@
   
   }
   
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;    
-  }
-  
-  body {
-      background-color: rgb(253, 253, 253);
-  }
-
-  :root {
-	--primary-color: #1393fc;
-	--background-color: #f9f5f0;
-	--dark-color: #151515;
-}
-
-html {
-	font-size: 62.5%;
-	font-family: 'Poppins', sans-serif;
-}
-.container-2{
-    display: flex;
-    height: 700px;
-    width: 1000px;
-    box-shadow: 0 0 2px  rgba(0, 0, 0, 0,4);
-    margin: auto;
-    margin-top: 50px;
-}
-
-
-
-/* ********************************** */
-/*               HEADER               */
-/* ********************************** */
-.container-hero {
-	background-color: var(--background-color);
-}
-
-.hero {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem 0;
-}
-
-
-.customer-support {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-}
-
-.customer-support i {
-	font-size: 3.3rem;
-}
-
-.content-customer-support {
-	display: flex;
-	flex-direction: column;
-}
-
-.container-logo {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.container-logo i {
-	font-size: 3rem;
-}
-
-.container-logo h1 a {
-	text-decoration: none;
-	color: #000;
-	font-size: 3rem;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-}
-
-.container-user {
-	display: flex;
-	gap: 1rem;
-	cursor: pointer;
-}
-
-.container-user .fa-user {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-right: 2.5rem;
-	border-right: 1px solid #e2e2e2;
-}
-
-.container-user .fa-basket-shopping {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-left: 1rem;
-}
-
-.content-shopping-cart {
-	display: flex;
-	flex-direction: column;
-}
-
-.container-navbar {
-	background-color: var(--primary-color);
-}
-
 

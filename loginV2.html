@@ -56,23 +56,23 @@
             </p>
         </div>
 
-        <form class="form">
-        <h2>Inicie Sesion</h2>
-            <p> 
-                Ingrese los datos que se pide para que pueda tener una cuenta y asi pueda reservar una cita para su mascota.
-            </p>
-            <div class="input">
-                <input type="email" class="box" placeholder="Ingrese su Correo" style="font-size: small;">
-                <input type="password" class="box" placeholder="Ingrese su Contraseña" style="font-size: small;"><br>
-                <input type="submit" value="login" class="submit">
-                <br><br/>
-                <a href="./registro.html" style="font-size: small;">No tienes Cuenta?</a><br><br>
-                <a href="#"  style="font-size: small;">Olvidaste tu Contraseña?</a>
-                
-            </div>
-        </form>
+        <form class="form" id="frmLogin">
+            <h2>Inicie Sesion</h2>
+                <p> 
+                    Ingrese los datos que se pide para que pueda tener una cuenta y asi pueda reservar una cita para su mascota.
+                </p>
+                <div class="input">
+                    <input type="email" class="box" placeholder="Ingrese su Correo" id="correoU" style="font-size: small;">
+                    <input type="password" class="box" placeholder="Ingrese su Contraseña" id="contraseñaU" style="font-size: small;"><br>
+                    <input type="submit" value="login" class="submit" id="log">
+                    <br><br/>
+                    <a href="./registro.html" style="font-size: small;">No tienes Cuenta?</a><br><br>
+                    <a href="#"  style="font-size: small;">Olvidaste tu Contraseña?</a>
+                </div>
+            </form>
     </div>
 
     <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="./jscrip/login.js"></script>
 </body>
 </html>
