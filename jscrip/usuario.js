@@ -41,4 +41,3 @@ document.getElementById('frmRegistro').addEventListener('submit', function(event
         console.error('Error al registrar usuario', error);
     });
 });
-

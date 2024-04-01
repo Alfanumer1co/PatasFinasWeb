@@ -1,3 +1,39 @@
+// conexión con la API  
+const listaProductos = document.getElementById('app');
+
+fetch("http://localhost:5276/api/producto")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((producto) => {
+      const item = document.createElement("div");
+      item.classList.add("item");
+
+      const titulo = document.createElement("span");
+      titulo.classList.add("titulo-item");
+      titulo.textContent = producto.nombreProducto;
+
+      const imagen = document.createElement("img");
+      imagen.classList.add("img-item");
+      imagen.src = producto.imagen;
+      imagen.alt = producto.nombreProducto;
+
+      const precio = document.createElement("span");
+      precio.classList.add("precio-item");
+      precio.textContent = `S/${producto.precio}`;
+
+      const boton = document.createElement("button");
+      boton.classList.add("boton-item");
+      boton.textContent = "Agregar al Carrito";
+
+      item.appendChild(titulo);
+      item.appendChild(imagen);
+      item.appendChild(precio);
+      item.appendChild(boton);
+
+      listaProductos.appendChild(item);
+    });
+  });
+
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
@@ -53,16 +89,14 @@ function pagarClicked(){
     ocultarCarrito();
 }
 //Funciòn que controla el boton clickeado de agregar al carrito
-function agregarAlCarritoClicked(event){
+function agregarAlCarritoClicked(event) {
     var button = event.target;
     var item = button.parentElement;
     var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
     var precio = item.getElementsByClassName('precio-item')[0].innerText;
     var imagenSrc = item.getElementsByClassName('img-item')[0].src;
-    console.log(imagenSrc);
 
     agregarItemAlCarrito(titulo, precio, imagenSrc);
-
     hacerVisibleCarrito();
 }
 
@@ -80,7 +114,7 @@ function hacerVisibleCarrito(){
 //Funciòn que agrega un item al carrito
 function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var item = document.createElement('div');
-    item.classList.add = ('item');
+    item.classList.add('item');
     var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
 
     //controlamos que el item que intenta ingresar no se encuentre en el carrito
@@ -91,7 +125,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
             return;
         }
     }
-
+    
     var itemCarritoContenido = `
         <div class="carrito-item">
             <img src="${imagenSrc}" width="80px" alt="">
@@ -99,7 +133,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
                 <span class="carrito-item-titulo">${titulo}</span>
                 <div class="selector-cantidad">
                     <i class="fa-solid fa-minus restar-cantidad"></i>
-                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <input type="text" value="${cantidad}" class="carrito-item-cantidad" disabled>
                     <i class="fa-solid fa-plus sumar-cantidad"></i>
                 </div>
                 <span class="carrito-item-precio">${precio}</span>
@@ -196,39 +230,3 @@ function actualizarTotalCarrito(){
 
 }
 
-
-// conexxion con la API  
-const listaProductos = document.getElementById('app');
-
-        fetch("http://localhost:5276/api/producto")
-          .then((response) => response.json())
-          .then((data) => {
-            data.forEach((producto) => {
-              const item = document.createElement("div");
-              item.classList.add("item");
-
-              const titulo = document.createElement("span");
-              titulo.classList.add("titulo-item");
-              titulo.textContent = producto.nombreProducto;
-
-              const imagen = document.createElement("img");
-              imagen.classList.add("img-item");
-              imagen.src = producto.imagen;
-              imagen.alt = producto.nombre;
-
-              const precio = document.createElement("span");
-              precio.classList.add("precio-item");
-              precio.textContent = `S/${producto.precio}`;
-
-              const boton = document.createElement("button");
-              boton.classList.add("boton-item");
-              boton.textContent = "Agregar al Carrito";
-
-              item.appendChild(titulo);
-              item.appendChild(imagen);
-              item.appendChild(precio);
-              item.appendChild(boton);
-
-              listaProductos.appendChild(item);
-            });
-          });
