@@ -1,2 +1,2 @@
 Fracazo, mi equipo no ayuda XD
-A aprender a Diseñar Web no más.
+Al final el proyecto lo hicieron en PHP, todo mal...., culpa del Instructor(esta vez si aplica)
